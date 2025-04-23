@@ -1,6 +1,7 @@
 package workshop.account.test;
 
 import workshop.account.entity.Account;
+import workshop.account.exception.InsufficientBalanceException;
 
 public class TestAccount {
 	public void showInfo(Account ac) {
@@ -30,8 +31,15 @@ public class TestAccount {
 		
 		// 잔액을 20000원 감소(출금)
 		amount = 20000;
-		ac.withdraw(amount);
+		try {
+			ac.withdraw(amount);
+			ac.withdraw(10000000);
+		} catch(InsufficientBalanceException e) {
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
 		System.out.println("\n" + amount + "원 출금됨.\n");
 		ta.showInfo(ac);
+
 	}
 }
