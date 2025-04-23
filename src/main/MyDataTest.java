@@ -23,9 +23,14 @@ class MyData {
 	}
 	
 	// day setter
-	public boolean setDay(int day) {
-		if (day > 0 && day < 32) {
+	public void setDay(int day) {
+		if (isValid(day)) {
 			this.day = day;
+		}
+	}
+	
+	private boolean isValid(int day) {
+		if (day > 0 && day < 32) {
 			return true;
 		}
 		else {
