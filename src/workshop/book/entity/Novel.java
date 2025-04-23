@@ -32,8 +32,4 @@ public class Novel extends Publication{
 	public void setGenre(String genre) {
 		this.genre = genre;
 	}
-	
-	
-	
-	
 }
