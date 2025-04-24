@@ -1,7 +1,7 @@
 package workshop.animal.control;
 import workshop.animal.entity.*;
 
-public class AnimalControl {
+public class AnimalTest {
 	
 	public static void main(String[] args) {
 		Fish d = new Fish();
